@@ -637,6 +637,9 @@ body,
                 line-height: 1.2;
                 font-weight: 600;
                 color: #606368;
+                @media (max-width: 990px) {
+                        display: none;
+                    }
             }
         }
     }
@@ -651,7 +654,6 @@ body,
         @media (max-width: 990px) {
             margin: 0 auto;
         }
-
 
         .input-container {
             .label {
