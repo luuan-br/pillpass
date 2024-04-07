@@ -46,7 +46,7 @@ body,
                 display: block;
                 width: 227px;
                 height: 100%;
-                background-image: url("/assets/images/Group 128.webp");
+                background-image: url("./assets/images/Group 128.webp");
                 background-size: contain;
                 background-repeat: no-repeat;
                 background-position: bottom;
@@ -219,7 +219,7 @@ body,
 
         &::after {
             content: '';
-            background-image: url("/assets/images/Rectangle 8.webp");
+            background-image: url("./assets/images/Rectangle 8.webp");
             background-repeat: no-repeat;
             background-size: contain;
             background-position: bottom;
@@ -292,7 +292,7 @@ body,
             contain: layout;
 
             &::after {
-                content: url("/assets/images/Group 127.webp");
+                content: url("./assets/images/Group 127.webp");
                 display: block;
                 position: absolute;
                 right: 0;
@@ -360,7 +360,7 @@ body,
             contain: layout;
 
             &::after {
-                content: url("/assets/images/Group 130.webp");
+                content: url("./assets/images/Group 130.webp");
                 position: absolute;
                 bottom: 0;
                 z-index: -1;
@@ -836,7 +836,7 @@ body,
 
             &:nth-child(3) {
                 &::after {
-                    background-image: url("/assets/images/Vector.webp");
+                    background-image: url("./assets/images/Vector.webp");
 
                     @media (max-width: 990px) {
                         transform: rotate(90deg);
@@ -853,7 +853,7 @@ body,
                 height: 24px;
                 border-radius: 100%;
                 background-color: #C5FA69;
-                background-image: url("/assets/images/add_24px.webp");
+                background-image: url("./assets/images/add_24px.webp");
                 background-position: center;
                 background-repeat: no-repeat;
                 background-size: 14px;
@@ -891,7 +891,7 @@ body,
                 font-weight: 600;
 
                 &::after {
-                    background-image: url("/assets/images/chevron_right_24px@2x.webp");
+                    background-image: url("./assets/images/chevron_right_24px@2x.webp");
                     background-position: center;
                 }
 
@@ -915,7 +915,7 @@ body,
             contain: layout;
 
             &::after {
-                content: url("/assets/images/PILL LILÁS 3.webp");
+                content: url("./assets/images/PILL LILÁS 3.webp");
                 position: absolute;
                 top: 30px;
                 right: -60px;
@@ -929,7 +929,7 @@ body,
             contain: layout;
 
             &::after {
-                content: url("/assets/images/Group 122.webp");
+                content: url("./assets/images/Group 122.webp");
                 position: absolute;
                 right: -105px;
                 bottom: -39px;
@@ -945,7 +945,7 @@ body,
         contain: layout;
 
         &::after {
-            content: url("/assets/images/Rectangle 4.webp");
+            content: url("./assets/images/Rectangle 4.webp");
             position: absolute;
             bottom: 0;
             right: -80px;
@@ -960,7 +960,7 @@ body,
 
         &::after {
             display: block;
-            content: url("/assets/images/login-coporativo.webp");
+            content: url("./assets/images/login-coporativo.webp");
             position: relative;
             bottom: 0;
             right: -142px;
@@ -978,7 +978,7 @@ body,
         contain: layout;
 
         &::after {
-            content: url("/assets/images/Rectangle 5.webp");
+            content: url("./assets/images/Rectangle 5.webp");
             position: absolute;
             bottom: 0;
             right: -80px;
