@@ -622,8 +622,6 @@ body,
                         }
                     }
                 }
-
-
             }
 
             .input-controle {
@@ -900,6 +898,10 @@ body,
                 &.collapsed {
                     border-radius: 5px;
                 }
+
+                &:focus {
+                   display: none;
+                }
             }
         }
 
@@ -988,6 +990,29 @@ body,
     }
 }
 
+#form-login {
+    .signup-text {
+        font-size: 0.875rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #40405C;
+
+        a {
+            font-weight: 500;
+            color: #9B8FCC;
+            text-decoration: none;
+        }
+    }
+
+    .recovery-password-text {
+        cursor: pointer;
+        font-size: 0.875rem;
+        font-weight: 500;
+        line-height: 1.5;
+        color: #9B8FCC;
+    }
+}
+
 #footer {
     background-color: #F1ECFF;
     color: #464646;
@@ -1003,6 +1028,194 @@ body,
             color: #000072;
             font-size: 14px;
             font-weight: 400;
+        }
+    }
+}
+
+#modal-success {
+    background-color: rgba(247, 245, 255, 0.5);
+    backdrop-filter: blur(8px);
+
+    .modal-content {
+        border-radius: 20px;
+
+        .modal-header {
+            border-bottom: 2px solid #9B8FCC;
+        }
+
+        .modal-body {
+            .modal-body-text {
+                font-size: 20px;
+                font-weight: 600;
+                line-height: 1.2;
+                color: #000072;
+            }
+
+            .btn-pill-secundary {
+                width: 100%;
+                max-width: 295px;
+            }
+        }
+    }
+}
+
+#modal-recovery-password {
+  background-color: rgba(247, 245, 255, 0.5);
+  backdrop-filter: blur(8px);
+
+  .modal-content {
+    border: 1px solid #36D588;
+
+    .modal-header {
+      .modal-title {
+        font-size: 1.375rem;
+        font-weight: 600;
+        line-height: 1.2;
+        color: #36D588;
+      }
+
+      .btn-close {
+        color: #36D588;
+      }
+    }
+
+    .modal-body {
+      .text-description {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #40405C;
+      }
+
+      .form-label {
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: #40405C;
+      }
+
+      .btn-pill-default {
+        font-size: 12px;
+        font-weight: 500;
+        color: #9B8FCC;
+      }
+
+      .btn-pill-modal {
+        font-size: 12px;
+        font-weight: 500;
+        background-color: #36D588;
+        color: #000072;
+
+        &:hover {
+          background-color: #36D588;
+          color: #000072;
+          filter: brightness(0.9);
+        }
+      }
+
+      .modal-body-title {
+        font-size: 1rem;
+        font-weight: 600;
+        line-height: 1.2;
+        color: #40405C
+      }
+
+      .modal-body-text {
+        font-size: 0.75rem;
+        font-weight: 400;
+        line-height: 400;
+        line-height: 1.5;
+        color: #79798F;
+      }
+    }
+  }
+}
+
+.page-singup {
+    #form-2ft {
+        .btn-pill-secundary {
+            background-color: #36D588;
+
+        }
+    }
+
+    .img-doctor {
+        position: relative;
+        contain: layout;
+
+        &::after {
+            content: url("../images/Rectangle 5-2.webp");
+            position: absolute;
+            bottom: 120px;
+            right: -120px;
+        }
+    }
+
+    .img-2fr {
+        position: relative;
+        contain: layout;
+    
+        &::after {
+            content: url("../images/Rectangle 4-2.webp");
+            position: absolute;
+            bottom: -8px;
+            right: -120px;
+
+            @media (max-width: 990px) {
+                width: 65%;
+            }
+        }
+    }
+}
+
+.page-singup-shopify {
+    #form-singup {
+        .title {
+            font-size: 1.75rem;
+            line-height: 1.2;
+            color: #40405C;
+        }
+
+        .description {
+            font-size: 0.875rem;
+            line-height: 1.5;
+            color: #282842;
+        }
+
+        .label-pill {
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 1;
+            color: #40405C;
+        }
+
+        .label-pill-check {
+            font-size: 14px;
+            line-height: 1.5;
+            font-weight: 400;
+            color: #40405C;
+
+            a {
+                font-weight: 500;
+                color: #9B8FCC;
+            }
+        }
+
+        #invalidCheck {
+            &:checked {
+                background-color: #9B8FCC;
+                border-color: #9B8FCC;
+            }
+        }
+
+        .img-error {
+            display: block;
+            width: 14px;
+            height: auto;
+        }
+
+        .text-error {
+            font-size: 12px;
+            line-height: 1.5;
         }
     }
 }

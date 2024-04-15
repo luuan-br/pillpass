@@ -70,7 +70,7 @@
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="login-corporativo.html">Corporativo</a></li>
-                                    <li><a class="dropdown-item" href="login-colaboradores.html">Colaboradores</a></li>
+                                    <li><a class="dropdown-item" href="//pill-pass.myshopify.com/account/login" target="_blank" rel="noopener noreferrer">Colaboradores</a></li>
                                     <li><a class="dropdown-item" href="login.html">Outros</a></li>
                                 </ul>
                             </li>
@@ -93,24 +93,36 @@
 
                     <div class="row mt-3">
                         <div class="col-12">
-                            <form class="needs-validation" novalidate style="max-width: 460px;">
+                            <form id="form-login" class="needs-validation" novalidate style="max-width: 460px;">
                                 <div class="input-group has-validation mb-3">
                                     <input name="email" type="email" class="form-control rounded-pill py-2 px-3" id="email" placeholder="E-mail coporativo:" required>
-                                    <div class="invalid-feedback">
-                                        Campo obrigatório.
+                                    <div class="invalid-feedback px-2">
+                                        <div class="d-grid gap-1" style="grid-template-columns: auto 1fr;align-items: center;">
+                                            <img class="img-fluid d-block" src="./assets/images/warnnig.svg" alt="wraning" />
+                                            <span>Formato de e-mail inválido</span>
+                                        </div>
                                     </div>
                                 </div>
 
                                 <div class="input-group has-validation mb-3">
                                     <input name="password" type="password" class="form-control rounded-pill py-2 px-3" id="password" placeholder="Senha:" required>
-                                    <div class="invalid-feedback">
-                                        Campo obrigatório.
+                                    <div class="invalid-feedback px-2">
+                                        <div class="d-grid gap-1" style="grid-template-columns: auto 1fr;align-items: center;">
+                                            <img class="img-fluid d-block" src="./assets/images/warnnig.svg" alt="wraning" />
+                                            <span>Campo obrigatório.</span>
+                                        </div>
                                     </div>
                                 </div>
 
-                                <button class="btn btn-pill-secundary rounded-pill py-2 d-block" type="submit" style="width: 100%;">
-                                    Solicitar orçamento
+                                <button class="btn btn-pill-secundary rounded-pill py-2 d-block mb-3" type="submit" style="width: 100%;">
+                                    Login
                                 </button>
+
+                                <p class="mx-2 signup-text">Não tem conta? <a href="/cadastro.html">Faça seu cadastro</a></p>
+
+                                <a class="btn btn-pill-secundary-outline rounded-pill py-2 d-block mb-3" href="/cadastro.html">Cadastre-se</a>
+
+                                <p class="text-end recovery-password-text" data-bs-toggle="modal" data-bs-target="#modal-recovery-password">Esqueceu a senha?</p>
                             </form>
                         </div>
                     </div>
@@ -234,29 +246,52 @@
         </div>
     </div>
 
+    <!-- Modal -->
+    <div class="modal fade" id="modal-recovery-password" tabindex="-1" aria-labelledby="modal-recovery-password" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title">Esqueci minha senha</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body modal-body--form">
+                    <form id="form-recovery-password" class="needs-validation" novalidate style="max-width: 460px;">
+                        <p class="text-description">Insira o e-mail cadastrado para receber as instruções de criação de uma nova senha</p>
+
+                        <label for="basic-url" class="form-label">E-mail</label>
+                        <div class="input-group has-validation mb-3">
+                            <input name="email" type="email" class="form-control rounded py-2 px-3" id="email" placeholder="E-mail coporativo:" required>
+                            <div class="invalid-feedback px-2">
+                                <div class="d-grid gap-1" style="grid-template-columns: auto 1fr;align-items: center;">
+                                    <img class="img-fluid d-block" src="./assets/images/warnnig.svg" alt="wraning" />
+                                    <span>Campo obrigatório.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-content-end gap-3">
+                            <button class="btn btn-pill-default rounded-pill py-2 d-block mb-2" data-bs-dismiss="modal" type="button">Cancelar</button>
+
+                            <button class="btn btn-pill-modal rounded-pill py-2 d-block mb-3" type="submit" style="width: 185px;">
+                                Enviar link de recuperação
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="modal-body modal-body--success" style="display: none;">
+                    <h3 class="modal-body-title text-center">Instruções enviadas!</h3>
+
+                    <div class="modal-body-text text-center mb-3">Se seu email consta em nossa base, as informações foram enviadas!</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
-    <script>
-        // Example starter JavaScript for disabling form submissions if there are invalid fields
-        (() => {
-        'use strict'
-
-        // Fetch all the forms we want to apply custom Bootstrap validation styles to
-        const forms = document.querySelectorAll('.needs-validation')
-
-        // Loop over them and prevent submission
-        Array.from(forms).forEach(form => {
-            form.addEventListener('submit', event => {
-            if (!form.checkValidity()) {
-                event.preventDefault()
-                event.stopPropagation()
-            }
-
-            form.classList.add('was-validated')
-            }, false)
-        })
-        })()
-    </script>
+    <!-- validation for forms -->
+    <script src="./assets/js/form-validation-bootstrap.js"></script>
 </body>
 </html>

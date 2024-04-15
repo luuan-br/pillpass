@@ -31,7 +31,7 @@
     <!-- styles -->
     <link rel="stylesheet" href="./assets/css/style-all.min.css">
 </head>
-<body class="page-login">
+<body class="page-singup-shopify bg-light">
     <h1 class="d-none">Pillpass - Saúde a preço de custo</h1>
     
     <div id="header" class="sticky-top">
@@ -81,59 +81,145 @@
         </nav>
     </div>
 
-    <div id="hero" class="mb-5">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-12 col-lg-6 order-1 order-lg-0">
-                    <div class="mb-5">
-                        <h2 class="primary-title">Tá pronto pra economizar?</h2>
+    <div id="form-singup" class="mt-5 mb-5 pb-5">
+        <div class="container ">
+            <div class="row mb-3">
+              <div class="col-12 col-lg-6 mx-auto">
+                  <h2 class="h3 title">Cadastre-se</h2>
+                  <p class="description">Insira seus dados abaixo para efetuar o cadastro </p>
+              </div>
+            </div>
 
-                        <p class="secundary-title">Faça o login com seu e-mail corporativo<br/> e sua senha</p>
-                    </div>
-
-                    <div class="row mt-3">
-                        <div class="col-12">
-                            <form id="form-login" class="needs-validation" novalidate style="max-width: 460px;">
+            <div class="row">
+                <div class="col-12 col-lg-6 mx-auto bg-white py-3 px-4 rounded-3 shadow-sm">
+                    <form id="form-budget-step-3  " class="needs-validation" novalidate >
+                        <div class="row">
+                            <div class="col-12 col-lg-6">
+                                <label for="full-name" class="form-label label-pill">Nome completo</label>
                                 <div class="input-group has-validation mb-3">
-                                    <input name="email" type="email" class="form-control rounded-pill py-2 px-3" id="email" placeholder="E-mail coporativo:" required>
+                                    <input name="full-name" type="text" class="form-control rounded py-2 px-3" id="full-name" placeholder="Fulano de Tal" required>
                                     <div class="invalid-feedback px-2">
                                         <div class="d-grid gap-1" style="grid-template-columns: auto 1fr;align-items: center;">
-                                            <img class="img-fluid d-block" src="./assets/images/warnnig.svg" alt="wraning" />
-                                            <span>Formato de e-mail inválido</span>
+                                            <img class="img-fluid d-block img-error" src="./assets/images/warnnig.svg" alt="wraning" />
+                                            <span class="text-error">Campo obrigatório.</span>
                                         </div>
                                     </div>
                                 </div>
-
+                            </div>
+                            <div class="col-12 col-lg-6">
+                                <label for="cpf" class="form-label label-pill">CPF</label>
                                 <div class="input-group has-validation mb-3">
-                                    <input name="password" type="password" class="form-control rounded-pill py-2 px-3" id="password" placeholder="Senha:" required>
+                                    <input name="cpf" type="text" class="form-control rounded py-2 px-3" id="cpf" minLenght="15" maxlength="14" size="14" placeholder="000.000.000-00" required>
                                     <div class="invalid-feedback px-2">
                                         <div class="d-grid gap-1" style="grid-template-columns: auto 1fr;align-items: center;">
-                                            <img class="img-fluid d-block" src="./assets/images/warnnig.svg" alt="wraning" />
-                                            <span>Campo obrigatório.</span>
+                                            <img class="img-fluid d-block img-error" src="./assets/images/warnnig.svg" alt="wraning" />
+                                            <span class="text-error">Campo obrigatório.</span>
                                         </div>
                                     </div>
                                 </div>
-
-                                <button class="btn btn-pill-secundary rounded-pill py-2 d-block mb-3" type="submit" style="width: 100%;">
-                                    Login
-                                </button>
-
-                                <p class="mx-2 signup-text">Não tem conta? <a href="/cadastro.html">Faça seu cadastro</a></p>
-
-                                <a class="btn btn-pill-secundary-outline rounded-pill py-2 d-block mb-3" href="/cadastro.html">Cadastre-se</a>
-
-                                <p class="text-end recovery-password-text" data-bs-toggle="modal" data-bs-target="#modal-recovery-password">Esqueceu a senha?</p>
-                            </form>
+                            </div>
                         </div>
-                    </div>
-                </div>
 
-                <div class="col-12 col-lg-6 order-0 order-lg-1 mb-3 mb-lg-0">
-                    <div class="row justify-content-end">
-                        <div class="col-auto img-doctor">
-                            <img class="img-fluid " src="./assets/images/doutores.webp" alt="pronto pra economizar?">
+                        <div class="row">
+                            <div class="col-12 col-lg-6">
+                                <label for="birth-data" class="form-label label-pill">Data de Nascimento</label>
+                                <div class="input-group has-validation mb-3">
+                                    <input name="birth-data" type="date" class="form-control rounded py-2 px-3" id="birth-data" placeholder="20/12/1990" required>
+                                    <div class="invalid-feedback px-2">
+                                        <div class="d-grid gap-1" style="grid-template-columns: auto 1fr;align-items: center;">
+                                            <img class="img-fluid d-block img-error" src="./assets/images/warnnig.svg" alt="wraning" />
+                                            <span class="text-error">Campo obrigatório.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-6 mb-3 mb-lg-0">
+                                <label for="gender" class="form-label label-pill">Sexo</label>
+                                <select class="form-select rounded py-2 px-3" id="gender" required>
+                                  <option selected disabled value="">Selecione...</option>
+                                  <option value="masculino">Masculino</option>
+                                  <option value="feminino">Feminino</option>
+                                </select>
+                                <div class="invalid-feedback px-2">
+                                  <div class="d-grid gap-1" style="grid-template-columns: auto 1fr;align-items: center;">
+                                      <img class="img-fluid d-block img-error" src="./assets/images/warnnig.svg" alt="wraning" />
+                                      <span class="text-error">Campo obrigatório.</span>
+                                  </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
+
+                        <div class="row">
+                            <div class="col-12 col-lg-6">
+                                <label for="phone" class="form-label label-pill">Celular (WhatsApp)</label>
+                                <div class="input-group has-validation mb-3">
+                                    <input name="phone" type="tel" class="form-control rounded py-2 px-3" id="phone" minLenght="15" maxlength="15" size="15" placeholder="(11) 99999-9999" required>
+                                    <div class="invalid-feedback px-2">
+                                        <div class="d-grid gap-1" style="grid-template-columns: auto 1fr;align-items: center;">
+                                            <img class="img-fluid d-block img-error" src="./assets/images/warnnig.svg" alt="wraning" />
+                                            <span class="text-error">Campo obrigatório.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <label for="email-singup" class="form-label label-pill">E-mail</label>
+                        <div class="input-group has-validation mb-3">
+                            <input name="email" type="email" class="form-control rounded py-2 px-3" id="email-singup" placeholder="nome@mail.com" required>
+                            <div class="invalid-feedback px-2">
+                                <div class="d-grid gap-1" style="grid-template-columns: auto 1fr;align-items: center;">
+                                    <img class="img-fluid d-block img-error" src="./assets/images/warnnig.svg" alt="wraning" />
+                                    <span class="text-error">Campo obrigatório.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-12 col-lg-6 mb-2 mb-lg-0">
+                                <label for="password" class="form-label label-pill">Senha</label>
+                                <div class="input-group has-validation">
+                                    <input name="password" type="password" class="form-control rounded py-2 px-3" id="password" required>
+                                    <div class="invalid-feedback px-2">
+                                        <div class="d-grid gap-1" style="grid-template-columns: auto 1fr;align-items: center;">
+                                            <img class="img-fluid d-block img-error" src="./assets/images/warnnig.svg" alt="wraning" />
+                                            <span class="text-error">Campo obrigatório.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-text">Sua senha deve ter 8 dígitos</div>
+                            </div>
+                            <div class="col-12 col-lg-6">
+                                <label for="confirm-password" class="form-label label-pill">Confirmar senha</label>
+                                <div class="input-group has-validation mb-3">
+                                    <input name="confirm-password" type="password" class="form-control rounded py-2 px-3" id="confirm-password" required>
+                                    <div class="invalid-feedback px-2">
+                                        <div class="d-grid gap-1" style="grid-template-columns: auto 1fr;align-items: center;">
+                                            <img class="img-fluid d-block img-error" src="./assets/images/warnnig.svg" alt="wraning" />
+                                            <span class="text-error">Campo obrigatório.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-check my-3 mb-4">
+                          <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                          <label class="form-check-label label-pill-check" for="invalidCheck">
+                            Concordo com os <a href="//pill.com.br/pages/termos-e-politicas" target="_blank" rel="noopener noreferrer">Termos e Condições de Uso</a> da Pill
+                          </label>
+                          <div class="invalid-feedback">
+                              <div class="d-grid gap-1" style="grid-template-columns: auto 1fr;align-items: center;">
+                                  <img class="img-fluid d-block" src="./assets/images/warnnig.svg" alt="wraning" />
+                                  <span class="text-error">Campo obrigatório.</span>
+                              </div>
+                          </div>
+                        </div>
+
+                        <button class="btn btn-pill-secundary rounded-pill py-2 px-4 d-block mb-3" type="submit" style="margin-left: auto;">
+                            Criar conta
+                        </button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -246,52 +332,13 @@
         </div>
     </div>
 
-    <!-- Modal -->
-    <div class="modal fade" id="modal-recovery-password" tabindex="-1" aria-labelledby="modal-recovery-password" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h2 class="modal-title">Esqueci minha senha</h2>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-
-                <div class="modal-body modal-body--form">
-                    <form id="form-recovery-password" class="needs-validation" novalidate style="max-width: 460px;">
-                        <p class="text-description">Insira o e-mail cadastrado para receber as instruções de criação de uma nova senha</p>
-
-                        <label for="basic-url" class="form-label">E-mail</label>
-                        <div class="input-group has-validation mb-3">
-                            <input name="email" type="email" class="form-control rounded py-2 px-3" id="email" placeholder="E-mail coporativo:" required>
-                            <div class="invalid-feedback px-2">
-                                <div class="d-grid gap-1" style="grid-template-columns: auto 1fr;align-items: center;">
-                                    <img class="img-fluid d-block" src="./assets/images/warnnig.svg" alt="wraning" />
-                                    <span>Campo obrigatório.</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="d-flex justify-content-end gap-3">
-                            <button class="btn btn-pill-default rounded-pill py-2 d-block mb-2" data-bs-dismiss="modal" type="button">Cancelar</button>
-
-                            <button class="btn btn-pill-modal rounded-pill py-2 d-block mb-3" type="submit" style="width: 185px;">
-                                Enviar link de recuperação
-                            </button>
-                        </div>
-                    </form>
-                </div>
-
-                <div class="modal-body modal-body--success" style="display: none;">
-                    <h3 class="modal-body-title text-center">Instruções enviadas!</h3>
-
-                    <div class="modal-body-text text-center mb-3">Se seu email consta em nossa base, as informações foram enviadas!</div>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <!-- bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <!-- validation for forms -->
     <script src="./assets/js/form-validation-bootstrap.js"></script>
+    <!-- mask -->
+    <script src="./assets/js/mask-for-input.js"></script>
+    <!-- script page singup -->
+    <script src="./assets/js/page-singup-shopify.js"></script>
 </body>
 </html>

@@ -9,7 +9,7 @@ createApp({
                     value: 700,
                     min: 0,
                     max: 2000,
-                    discount: 0.8,
+                    discount: 0.5,
                     position: "10px",
                 },
                 {
@@ -17,7 +17,7 @@ createApp({
                     value: 50,
                     min: 0,
                     max: 2000,
-                    discount: 0.5,
+                    discount: 0.3,
                     position: "10px",
                 },
                 {
@@ -44,6 +44,14 @@ createApp({
                     acc +
                     Number(range.value) -
                     Number(range.value) * range.discount,
+                0
+            );
+
+            return Number(discount).toFixed(0);
+        },
+        discount() {
+            const discount = this.ranges.reduce(
+                (acc, range) => acc + Number(range.value) * range.discount,
                 0
             );
 

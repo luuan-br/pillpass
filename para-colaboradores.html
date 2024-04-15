@@ -70,7 +70,7 @@
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="login-corporativo.html">Corporativo</a></li>
-                                    <li><a class="dropdown-item" href="login-colaboradores.html">Colaboradores</a></li>
+                                    <li><a class="dropdown-item" href="//pill-pass.myshopify.com/account/login" target="_blank" rel="noopener noreferrer">Colaboradores</a></li>
                                     <li><a class="dropdown-item" href="login.html">Outros</a></li>
                                 </ul>
                             </li>
@@ -295,9 +295,9 @@
                 <div class="col-12 col-lg-5">
                     <div class="calculator-result">
                         <div class="input-container">
-                            <div class="label">Gastos com Medicamentos</div>
+                            <div class="label">Seu gasto mensal</div>
                             <div class="total-value">
-                                <div class="value">R$ {{ total }}</div>
+                                <div class="value">R$ {{ totalWithDiscount }}</div>
                                 <div class="text">DE ECONOMIA</div>
                             </div>
                         </div>
@@ -311,7 +311,7 @@
                             </div>
                             <div class="currency-pillpass">
                                 <div class="label">Pillpass</div>
-                                <div class="value">R$ {{ totalWithDiscount }}</div>
+                                <div class="value">R$ {{ discount }}</div>
                             </div>
                         </div>
                     </div>
@@ -558,6 +558,6 @@
     <!-- vueJs -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
     <!-- script -->
-    <script src="./assets/js/index.js"></script>
+    <script src="./assets/js/pillpass-price-calculator.js"></script>
 </body>
 </html>
