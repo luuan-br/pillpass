@@ -8,6 +8,10 @@
         const { currentTarget } = event;
 
         if (currentTarget.checkValidity()) {
+            const data = new FormData(currentTarget);
+
+            document.getElementById("email-send").innerText = data.get("email")
+
             toggleFromsAnimate();
         }
     });
