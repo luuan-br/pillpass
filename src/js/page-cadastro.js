@@ -35,7 +35,7 @@
             duration: 0.3,
             onComplete: () => {
                 gsap.to("#form-2ft", {
-                    display: "block",
+                    display: "flex",
                     opacity: 1,
                     duration: 0.2,
                 });

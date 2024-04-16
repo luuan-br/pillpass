@@ -140,9 +140,14 @@
 
                         <div class="col-12">
                             <form id="form-budget-step-2" class="needs-validation" novalidate style="max-width: 463px;">
+                                <div id="alert-error-form" class="alert alert-warning alert-dismissible fade show" role="alert" style="display: none; opacity: 0;">
+                                    <strong>Ops!</strong> Ocorreu um problema ao enviar sua solicição, por favor tente novamente ou entre em contato com nosso suporte.
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                </div>
+
                                 <div class="mb-5">
                                     <div class="input-group has-validation mb-3">
-                                        <input name="email" type="email" class="form-control rounded-pill py-2 px-3" id="email" placeholder="Nome Completo:" required>
+                                        <input name="full-name" type="text" class="form-control rounded-pill py-2 px-3" id="full-name" placeholder="Nome Completo:" required>
                                         <div class="invalid-feedback px-2">
                                             <div class="d-grid gap-1" style="grid-template-columns: auto 1fr;align-items: center;">
                                                 <img class="img-fluid" src="./assets/images/warnnig.svg" alt="wraning" />
@@ -152,7 +157,7 @@
                                     </div>
                                     
                                     <div class="input-group has-validation mb-3">
-                                        <input name="phone" type="phone" class="form-control rounded-pill py-2 px-3" id="phone" placeholder="Celular: +55  DDD 00000-0000" required>
+                                        <input name="phone" type="phone" class="form-control rounded-pill py-2 px-3" id="phone" minlength="15" maxlength="15" placeholder="Celular: +55  DDD 00000-0000" required>
                                         <div class="invalid-feedback px-2">
                                             <div class="d-grid gap-1" style="grid-template-columns: auto 1fr;align-items: center;">
                                                 <img class="img-fluid" src="./assets/images/warnnig.svg" alt="wraning" />
@@ -162,7 +167,7 @@
                                     </div>
                                     
                                     <div class="input-group has-validation mb-3">
-                                        <input name="cnpj" type="text" class="form-control rounded-pill py-2 px-3" id="cnpj" placeholder="CNPJ da empresa:" required>
+                                        <input name="cnpj" type="text" class="form-control rounded-pill py-2 px-3" id="cnpj" minlength="18" maxlength="18" placeholder="CNPJ da empresa:" required>
                                         <div class="invalid-feedback px-2">
                                             <div class="d-grid gap-1" style="grid-template-columns: auto 1fr;align-items: center;">
                                                 <img class="img-fluid" src="./assets/images/warnnig.svg" alt="wraning" />
@@ -172,7 +177,7 @@
                                     </div>
 
                                     <div class="input-group has-validation mb-3">
-                                        <input name="number" type="text" class="form-control rounded-pill py-2 px-3" id="number" placeholder="Nº Colaboradores:" required>
+                                        <input name="num_workers" type="number" class="form-control rounded-pill py-2 px-3" id="num_workers" placeholder="Nº Colaboradores:" required>
                                         <div class="invalid-feedback px-2">
                                             <div class="d-grid gap-1" style="grid-template-columns: auto 1fr;align-items: center;">
                                                 <img class="img-fluid" src="./assets/images/warnnig.svg" alt="wraning" />
@@ -182,7 +187,7 @@
                                     </div>
                                 </div>
 
-                                <button class="btn btn-pill-secundary rounded-pill py-2 d-block" type="submit" style="width: 100%;">
+                                <button id="send_quotation" class="btn btn-pill-secundary rounded-pill py-2 d-block" type="submit" style="width: 100%;">
                                     Enviar
                                 </button>
                             </form>
@@ -329,6 +334,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <!-- validation for forms -->
     <script src="./assets/js/form-validation-bootstrap.js"></script>
+    <!-- mask -->
+    <script src="./assets/js/mask-for-input.js"></script>
 
     <!-- gsap -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>

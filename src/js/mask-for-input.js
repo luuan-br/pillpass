@@ -30,3 +30,20 @@ function mask_phone(input) {
 
   input.currentTarget.value = result;
 }
+
+/**
+ * Mascara para CNPJ
+ * @param {InputEvent} input 
+ */
+function mask_cnpj(input) {
+  // XX. XXX. XXX/0001-XX
+  let value = input.currentTarget.value;
+  let result = value.replace(/\D/g, "");
+
+  result = result.replace(/(\d{2})(\d{1})/, "$1.$2");
+  result = result.replace(/(\d{3})(\d{1})/, "$1.$2");
+  result = result.replace(/(\d{3})(\d{1})/, "$1/$2");
+  result = result.replace(/(\d{4})(\d{1})/, "$1-$2");
+
+  input.currentTarget.value = result;
+}

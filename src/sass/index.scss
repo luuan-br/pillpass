@@ -977,6 +977,10 @@ body,
 }
 
 .page-login-3 {
+    #hero {
+        min-height: 100vh;
+    }
+
     .img-login {
         position: relative;
         contain: layout;
@@ -987,6 +991,17 @@ body,
             bottom: 0;
             right: -80px;
         }
+    }
+}
+
+.page-login, .page-login-2, .page-login-3 {
+    #hero {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 45px 0;
     }
 }
 
@@ -1131,6 +1146,15 @@ body,
 }
 
 .page-singup {
+    #hero, #form-2ft {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 45px 0;
+    }
+
     #form-2ft {
         .btn-pill-secundary {
             background-color: #36D588;
