@@ -654,6 +654,8 @@ body,
         }
 
         .input-container {
+            position: relative;
+
             .label {
                 font-size: 18px;
                 line-height: 1.2;
@@ -686,6 +688,7 @@ body,
                 .text {
                     font-size: 18px;
                     font-weight: 600;
+                    text-align: right;
                     line-height: 1.2;
                     color: #000072;
                     transform: translateY(10px);
