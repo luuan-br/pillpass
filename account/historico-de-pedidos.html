@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="pt-bt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pillpass - Para Empresas</title>
+
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="../assets/images/logo_pillpass.svg">
+
+    <!-- metadados -->
+    <meta name="description" content="Descubra o Pillpass, um benefício oferecido pela sua empresa que garante preço de custo em mais de 35 mil itens de farmácia. Economize em seus medicamentos e produtos de saúde.">
+    <meta name="keywords" content="Pillpass, saúde, farmácia, medicamentos, benefício, empresa, preço de custo">
+    <meta property="og:title" content="Pillpass - Saúde a preço de custo">
+    <meta property="og:description" content="Descubra o Pillpass, um benefício oferecido pela sua empresa que garante preço de custo em mais de 35 mil itens de farmácia. Economize em seus medicamentos e produtos de saúde.">
+    <meta property="og:image" content="../assets/images/screenshort.webp">
+    <meta property="og:url" content="../assets/images/screenshort.webp">
+    <meta name="twitter:card" content="/assets/images/screenshort.webp">
+    <meta name="twitter:title" content="Pillpass - Saúde a preço de custo">
+    <meta name="twitter:description" content="Descubra o Pillpass, um benefício oferecido pela sua empresa que garante preço de custo em mais de 35 mil itens de farmácia. Economize em seus medicamentos e produtos de saúde.">
+    <meta name="twitter:image" content="../assets/images/screenshort.webp">
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <!-- styles -->
+    <link rel="stylesheet" href="../assets/css/style-all.min.css">
+</head>
+<body class="page-account bg-light">
+    <h1 class="d-none">Pillpass - Saúde a preço de custo</h1>
+    
+    <div id="header" class="sticky-top">
+        <nav class="navbar navbar-expand-lg bg-body-white shadow-sm py-4">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="../assets/images/logo_pillpass.svg" alt="pill pass" width="78" height="38">
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 gap-3">
+                            <li class="nav-item">
+                                <a class="nav-link border border-2 rounded-pill px-3 active" aria-current="page" href="index.html">Para empresas</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link border border-2 rounded-pill px-3" href="para-colaboradores.html">Para Colaboradores</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link border border-2 rounded-pill px-3" href="planos-e-precos.html">Planos e Preços</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link border border-2 rounded-pill px-3" href="quero-uma-cotacao.html">Quero uma Cotação</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle border border-2 rounded-pill px-3" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Entrar
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="login-corporativo.html">Corporativo</a></li>
+                                    <li><a class="dropdown-item" href="//pill-pass.myshopify.com/account/login" target="_blank" rel="noopener noreferrer">Colaboradores</a></li>
+                                    <li><a class="dropdown-item" href="login.html">Outros</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="container bd-layout">
+        <aside class="bd-sidebar bg-white py-lg-5">
+            <div class="offcanvas-lg offcanvas-start" tabindex="-1" id="bdSidebar" aria-labelledby="bdSidebarOffcanvasLabel">
+                <div class="offcanvas-header border-bottom">
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#bdSidebar"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <nav class="navbar-pillpass w-100" aria-label="Nav account">
+                        <ul>
+                            <li>
+                                <strong>Minha conta</strong>
+
+                               <ul>
+                                    <li>
+                                        <a href="/account/index.html">Economizômetro</a>
+                                    </li>
+                                    <li>
+                                        <a href="/account/meus-dados.html">Meus dados</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Meu plano</a>
+                                    </li>
+                                    <li>
+                                        <a class="active" aria-current="page" href="/account/historico-de-pedidos.html">Histórico de pedidos</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="d-none">
+                                <strong>Coleções relevantes</strong>
+
+                                <ul>
+                                    <li>
+                                        <a href="#">Medicamentos</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Cosméticos</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Perfumaria</a>
+                                    </li>
+                                    <li> 
+                                        <a href="#">Higiene e beleza</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="d-none">
+                                <strong>Fale conosco</strong>
+
+                                <ul class="mb-0">
+                                    <li>
+                                        <a href="#">E-mail</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">WhatsApp</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </aside>
+        
+        <main class="bd-main order-1 py-5">
+            <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Início</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Histórico de pedidos</li>
+                </ol>
+            </nav>
+
+            <h2 class="account-title">Histórico de pedidos</h2>
+
+            <div class="row align-items-center justify-content-between mb-4">
+                <div class="col-12 col-lg-6">
+                    <form class="d-flex search-order" role="search">
+                        <input class="form-control" type="search" placeholder="Digite o número do pedido" aria-label="Search" style="max-width: 328px;">
+                    </form>
+                </div>
+
+                <div class="col-12 col-lg-5 ">
+                    <div class="d-flex justify-content-end">
+                        <select class="filter-select form-select rounded-3 shadow-sm me-2 fw-medium" id="gender" required>
+                            <option selected value="30">Últimos 30 dias</option>
+                            <option value="15">Últimos 15 dias</option>
+                            <option value="7">Últimos 7 dias</option>
+                        </select>
+
+                        <select class="filter-select form-select rounded-3 fw-medium" id="gender" required>
+                            <option selected disabled value="">Status do pedido</option>
+                            <option value="masculino">Pendente</option>
+                            <option value="feminino">Finalizado</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <a href="/account/pedido.html" class="card-order bg-white rounded-4 shadow-sm p-4 mb-3">
+                    <div class="h4 order-number">Pedido nº 10023</div>
+
+                    <div>
+                        <p class="label">Data do pedido</p>
+                        <p class="date">00/00/0000</p>
+                    </div>
+
+                    <div>
+                        <p class="label">Valor do pedido</p>
+                        <p class="price">R$ 198,99</p>
+                    </div>
+
+                    <div>
+                        <p class="label">Sua economia</p>
+                        <p class="price price--spotlight">R$ 26,99</p>
+                    </div>
+
+                    <div>
+                        <p class="text-center label">Itens do pedido</p>
+                        <p class="text-center quantity">02</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-12">
+                <nav class="pagination-container" aria-label="paginação de pedidos">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item active" aria-current="page">
+                            <span class="page-link">1</span>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </main>
+    </div>
+
+    <div id="footer" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-2 mb-4 mb-lg-0">
+                    <img class="img-fluid mb-3 d-block" src="../assets/images/logo_pillpass.svg" alt="pill pass" width="78" height="38">
+
+                    <div class="row justify-content-start ">
+                        <div class="col-auto align-self-center">
+                            <a href="//www.linkedin.com/company/pillfarma/" target="_blank" rel="noopener noreferrer">
+                                <img class="img-fluid" src="../assets/images/linkedin.svg" alt="linkedin">
+                            </a>
+                        </div>
+                        <!-- <div class="col-auto align-self-center">
+                            <a href="http://" target="_blank" rel="noopener noreferrer">
+                                <img class="img-fluid" src="../assets/images/spotify.svg" alt="spotify">
+                            </a>
+                        </div> -->
+                        <div class="col-auto align-self-center">
+                            <a href="//www.facebook.com/pillfarma/" target="_blank" rel="noopener noreferrer">
+                                <img class="img-fluid" src="../assets/images/facebook.svg" alt="facebook">
+                            </a>
+                        </div>
+                        <div class="col-auto align-self-center">
+                            <a href="//www.instagram.com/pillfarma/" target="_blank" rel="noopener noreferrer">
+                                <img class="img-fluid" src="../assets/images/instagram.svg" alt="instagram">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-3 mb-4 mb-lg-0">
+                    <div class="row mb-4 menu-footer">
+                        <div class="col-12">
+                            <h3 class="h6 menu-footer__title">Sobre a Pillpass</h3>
+                        </div>
+
+                        <div class="col-12">
+                            <a class="text-decoration-none menu-footer__link" href="//pill.com.br/pages/quem-somos" target="_blank" rel="noopener noreferrer">Quem somos</a>
+                        </div>
+                        <div class="col-12">
+                            <a class="text-decoration-none menu-footer__link" href="//pill.com.br/pages/blog-pill" target="_blank" rel="noopener noreferrer">Blog da Pillpass</a>
+                        </div>
+                        <!-- <div class="col-12">
+                            <a class="text-decoration-none menu-footer__link" href="http://" target="_blank" rel="noopener noreferrer">Trabalhe conosco</a>
+                        </div> -->
+                    </div>
+
+                    <div class="row menu-footer">
+                        <div class="col-12">
+                            <h3 class="h6 menu-footer__title">Fale conosco</h3>
+                        </div>
+
+                        <div class="col-12">
+                            <a class="text-decoration-none menu-footer__link" href="//api.whatsapp.com/send?phone=5511999990380" target="_blank" rel="noopener noreferrer">
+                                <img class="img-fluid d-inline" style="max-width: 13px;" src="../assets/images/Union.svg" alt="whatsapp">
+                                <div class="d-inline mx-1">(11) 3864-0655</div>
+                            </a>
+                        </div>
+                        <div class="col-12">
+                            <a class="text-decoration-none menu-footer__link" href="mailto:oi@pillpass.com.br" target="_blank" rel="noopener noreferrer">
+                                <img class="img-fluid d-inline" style="max-width: 13px;" src="../assets/images/Vector.svg" alt="email">
+                                <div class="d-inline mx-1">oi@pillpass.com.br</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-3 mb-4 mb-lg-0">
+                    <div class="row mb-4 menu-footer">
+                        <div class="col-12">
+                            <h3 class="h6 menu-footer__title">Informações técnicas</h3>
+                        </div>
+
+                        <div class="col-12">
+                            <a class="text-decoration-none menu-footer__link" href="//pill.com.br/pages/termos-e-politicas" target="_blank" rel="noopener noreferrer">Termos e Políticas</a>
+                        </div>
+                        <div class="col-12">
+                            <a class="text-decoration-none menu-footer__link" href="planos-e-precos.html#fqa">Dúvidas frequentes</a>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12">
+                            <img src="../assets/images/Coluna 4@2x.webp" alt="selos de qualidade pill" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-4">
+                    <div class="row justify-content-center">
+                        <div class="col-auto">
+                            <small>
+                                Farmacêutica Responsável: Natália Rodrigues D'Agostino<br/>
+                                CRF/SP: 94516 • CMVS: 355030801-477-012535-1-4<br/>
+                                AFE: 7.82.784-8<br/>
+                                <br/>
+                                Av. Dr. Arnaldo, 1.888 - São Paulo (SP) - Sumaré<br/>
+                                CEP: 01255-000 • Telefone: (11) 97072-4934<br/>
+                                Segunda a Sexta-feira: 08h - 20h<br/>
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- validation for forms -->
+    <script src="../assets/js/form-validation-bootstrap.js"></script>
+</body>
+</html>
