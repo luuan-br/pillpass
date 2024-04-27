@@ -130,6 +130,150 @@
         </div>
     </div>
 
+    <div id="form-singup" class="mt-5 mb-5 pb-5" style="display: none;">
+        <div class="container ">
+            <div class="row mb-3">
+              <div class="col-12 col-lg-6 mx-auto">
+                  <h2 class="h3 title">Cadastre-se</h2>
+                  <p class="description">Insira seus dados abaixo para efetuar o cadastro </p>
+              </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12 col-lg-6 mx-auto bg-white py-3 px-4 rounded-3 shadow-sm">
+                    <form id="form-budget-step-3  " class="needs-validation" novalidate >
+                        <div class="row">
+                            <div class="col-12 col-lg-6">
+                                <label for="full-name" class="form-label label-pill">Nome completo</label>
+                                <div class="input-group has-validation mb-3">
+                                    <input name="full-name" type="text" class="form-control rounded py-2 px-3" id="full-name" placeholder="Fulano de Tal" required>
+                                    <div class="invalid-feedback px-2">
+                                        <div class="d-grid gap-1" style="grid-template-columns: auto 1fr;align-items: center;">
+                                            <img class="img-fluid d-block img-error" src="./assets/images/warnnig.svg" alt="wraning" />
+                                            <span class="text-error">Campo obrigatório.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-6">
+                                <label for="cpf" class="form-label label-pill">CPF</label>
+                                <div class="input-group has-validation mb-3">
+                                    <input name="cpf" type="text" class="form-control rounded py-2 px-3" id="cpf" minLenght="15" maxlength="14" size="14" placeholder="000.000.000-00" required>
+                                    <div class="invalid-feedback px-2">
+                                        <div class="d-grid gap-1" style="grid-template-columns: auto 1fr;align-items: center;">
+                                            <img class="img-fluid d-block img-error" src="./assets/images/warnnig.svg" alt="wraning" />
+                                            <span class="text-error">Campo obrigatório.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-12 col-lg-6">
+                                <label for="birth-data" class="form-label label-pill">Data de Nascimento</label>
+                                <div class="input-group has-validation mb-3">
+                                    <input name="birth-data" type="date" class="form-control rounded py-2 px-3" id="birth-data" placeholder="20/12/1990" required>
+                                    <div class="invalid-feedback px-2">
+                                        <div class="d-grid gap-1" style="grid-template-columns: auto 1fr;align-items: center;">
+                                            <img class="img-fluid d-block img-error" src="./assets/images/warnnig.svg" alt="wraning" />
+                                            <span class="text-error">Campo obrigatório.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-6 mb-3 mb-lg-0">
+                                <label for="gender" class="form-label label-pill">Sexo</label>
+                                <select class="form-select rounded py-2 px-3" id="gender" required>
+                                  <option selected disabled value="">Selecione...</option>
+                                  <option value="masculino">Masculino</option>
+                                  <option value="feminino">Feminino</option>
+                                </select>
+                                <div class="invalid-feedback px-2">
+                                  <div class="d-grid gap-1" style="grid-template-columns: auto 1fr;align-items: center;">
+                                      <img class="img-fluid d-block img-error" src="./assets/images/warnnig.svg" alt="wraning" />
+                                      <span class="text-error">Campo obrigatório.</span>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-12 col-lg-6">
+                                <label for="phone" class="form-label label-pill">Celular (WhatsApp)</label>
+                                <div class="input-group has-validation mb-3">
+                                    <input name="phone" type="tel" class="form-control rounded py-2 px-3" id="phone" minLenght="15" maxlength="15" size="15" placeholder="(11) 99999-9999" required>
+                                    <div class="invalid-feedback px-2">
+                                        <div class="d-grid gap-1" style="grid-template-columns: auto 1fr;align-items: center;">
+                                            <img class="img-fluid d-block img-error" src="./assets/images/warnnig.svg" alt="wraning" />
+                                            <span class="text-error">Campo obrigatório.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <label for="email-singup" class="form-label label-pill">E-mail</label>
+                        <div class="input-group has-validation mb-3">
+                            <input name="email" type="email" class="form-control rounded py-2 px-3" id="email-singup" placeholder="nome@mail.com" required>
+                            <div class="invalid-feedback px-2">
+                                <div class="d-grid gap-1" style="grid-template-columns: auto 1fr;align-items: center;">
+                                    <img class="img-fluid d-block img-error" src="./assets/images/warnnig.svg" alt="wraning" />
+                                    <span class="text-error">Campo obrigatório.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-12 col-lg-6 mb-2 mb-lg-0">
+                                <label for="password" class="form-label label-pill">Senha</label>
+                                <div class="input-group has-validation">
+                                    <input name="password" type="password" class="form-control rounded py-2 px-3" id="password" required>
+                                    <div class="invalid-feedback px-2">
+                                        <div class="d-grid gap-1" style="grid-template-columns: auto 1fr;align-items: center;">
+                                            <img class="img-fluid d-block img-error" src="./assets/images/warnnig.svg" alt="wraning" />
+                                            <span class="text-error">Campo obrigatório.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-text">Sua senha deve ter 8 dígitos</div>
+                            </div>
+                            <div class="col-12 col-lg-6">
+                                <label for="confirm-password" class="form-label label-pill">Confirmar senha</label>
+                                <div class="input-group has-validation mb-3">
+                                    <input name="confirm-password" type="password" class="form-control rounded py-2 px-3" id="confirm-password" required>
+                                    <div class="invalid-feedback px-2">
+                                        <div class="d-grid gap-1" style="grid-template-columns: auto 1fr;align-items: center;">
+                                            <img class="img-fluid d-block img-error" src="./assets/images/warnnig.svg" alt="wraning" />
+                                            <span class="text-error">Campo obrigatório.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-check my-3 mb-4">
+                          <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                          <label class="form-check-label label-pill-check" for="invalidCheck">
+                            Concordo com os <a href="//pill.com.br/pages/termos-e-politicas" target="_blank" rel="noopener noreferrer">Termos e Condições de Uso</a> da Pill
+                          </label>
+                          <div class="invalid-feedback">
+                              <div class="d-grid gap-1" style="grid-template-columns: auto 1fr;align-items: center;">
+                                  <img class="img-fluid d-block" src="./assets/images/warnnig.svg" alt="wraning" />
+                                  <span class="text-error">Campo obrigatório.</span>
+                              </div>
+                          </div>
+                        </div>
+
+                        <button class="btn btn-pill-secundary rounded-pill py-2 px-4 d-block mb-3" type="submit" style="margin-left: auto;">
+                            Criar conta
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <!-- validation for forms -->
