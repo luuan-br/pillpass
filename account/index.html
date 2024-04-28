@@ -164,28 +164,30 @@
                 <p class="account-description">Veja aqui o quanto você  economiza com a PillPass</p>
 
                 <div class="bg-white rounded-4 shadow-sm p-4 mb-3">
-                    <div class="d-flex align-items-center">
-                        <h3 class="flex-grow-1 card-saved-title">Vamos dar uma olhada <br/>como está sendo<br/> sua economia!</h3>
+                    <div class="d-flex flex-column flex-lg-row align-items-lg-center">
+                        <h3 class="flex-grow-1 card-saved-title mb-3 mb-lg-0">Vamos dar uma olhada <br/>como está sendo<br/> sua economia!</h3>
                     
                         <div class="card-saved">
                             <img class="img-fluid" src="/assets/images/Carinha.svg" alt="Você já economizou" />
                             <h4 class="h6">Você já economizou</h4>
-                            <p>R$ 380,00</p>
+                            <p id="economy-total" class="placeholder-glow">
+                                <span class="placeholder col-7"></span>
+                            </p>
                         </div>
                     </div>
                 </div>
 
                 <div class="bg-white rounded-4 shadow-sm p-4 mb-3">
                     <div class="grafic-bar">
-                        <h3 class="h5 grafic-bar-title">Jan - Abril </h3>
+                        <!-- <h3 class="h5 grafic-bar-title">Jan - Abril</h3> -->
 
-                        grafico de barras
+                        <div id="orders" style="height: 380px;"></div>
                     </div>
                 </div>
 
                 <div class="bg-white rounded-4 shadow-sm p-4 mb-5">
                     <div class="grafic-bar">
-                        grafico de barras
+                        <div id="categories"></div>
                     </div>
                 </div>
             </nav>
@@ -301,5 +303,9 @@
 
     <!-- bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!-- dependecy for grafics -->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="../assets/js/page-home-account.js"></script>
 </body>
 </html>

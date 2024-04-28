@@ -46,6 +46,11 @@
 
                     <div class="row mt-3">
                         <div class="col-12">
+                            <div id="alert-send-email" class="alert alert-warning alert-dismissible fade show mb-3" role="alert" style="display:none;opacity: 0;max-width: 460px;">
+                                <span class="alert-message"></span>
+                                <button type="button" class="btn-close" aria-label="Close"></button>
+                            </div>
+
                             <form id="form-budget-step-1" class="needs-validation" novalidate style="max-width: 460px;">
                                 <div class="input-group has-validation mb-3">
                                     <input name="email" type="email" class="form-control rounded-pill py-2 px-3" id="email" placeholder="email@email.com.br" required>
@@ -88,6 +93,11 @@
                         </div>
 
                         <div class="col-12">
+                            <div id="alert-validade-code" class="alert alert-warning alert-dismissible fade show mb-3" role="alert" style="display:none;opacity: 0;max-width: 463px;">
+                                <span class="alert-message"></span>
+                                <button type="button" class="btn-close" aria-label="Close"></button>
+                            </div>
+
                             <form id="form-budget-step-2" class="needs-validation" novalidate style="max-width: 463px;">
                                 <div class="d-flex text-center mx-3" style="gap: 1rem;">
                                     <div class="input-group has-validation mb-3">
@@ -108,6 +118,10 @@
 
                                     <div class="input-group has-validation mb-3">
                                         <input name="code5" type="text" class="form-control text-center rounded-2 py-2 px-3" id="code5" maxlength="1" size="1" placeholder="0" required>
+                                    </div>
+
+                                    <div class="input-group has-validation mb-3">
+                                        <input name="code6" type="text" class="form-control text-center rounded-2 py-2 px-3" id="code6" maxlength="1" size="1" placeholder="0" required>
                                     </div>
                                 </div>
 
@@ -130,7 +144,7 @@
         </div>
     </div>
 
-    <div id="form-singup" class="mt-5 mb-5 pb-5" style="display: none;">
+    <div id="form-singup" class="py-5 bg-light" style="display: none;">
         <div class="container ">
             <div class="row mb-3">
               <div class="col-12 col-lg-6 mx-auto">
@@ -141,12 +155,14 @@
 
             <div class="row">
                 <div class="col-12 col-lg-6 mx-auto bg-white py-3 px-4 rounded-3 shadow-sm">
-                    <form id="form-budget-step-3  " class="needs-validation" novalidate >
+                    <form id="form-budget-step-3" class="needs-validation" novalidate >
+                        <input type="hidden" name="code" id="code-singup" required />
+
                         <div class="row">
                             <div class="col-12 col-lg-6">
-                                <label for="full-name" class="form-label label-pill">Nome completo</label>
+                                <label for="first_name" class="form-label label-pill">Nome</label>
                                 <div class="input-group has-validation mb-3">
-                                    <input name="full-name" type="text" class="form-control rounded py-2 px-3" id="full-name" placeholder="Fulano de Tal" required>
+                                    <input name="first_name" type="text" class="form-control rounded py-2 px-3" id="first_name" placeholder="Nome" required>
                                     <div class="invalid-feedback px-2">
                                         <div class="d-grid gap-1" style="grid-template-columns: auto 1fr;align-items: center;">
                                             <img class="img-fluid d-block img-error" src="./assets/images/warnnig.svg" alt="wraning" />
@@ -156,15 +172,26 @@
                                 </div>
                             </div>
                             <div class="col-12 col-lg-6">
-                                <label for="cpf" class="form-label label-pill">CPF</label>
+                                <label for="last_name" class="form-label label-pill">Sobrenome</label>
                                 <div class="input-group has-validation mb-3">
-                                    <input name="cpf" type="text" class="form-control rounded py-2 px-3" id="cpf" minLenght="15" maxlength="14" size="14" placeholder="000.000.000-00" required>
+                                    <input name="last_name" type="text" class="form-control rounded py-2 px-3" id="last_name" placeholder="Sobrenome" required>
                                     <div class="invalid-feedback px-2">
                                         <div class="d-grid gap-1" style="grid-template-columns: auto 1fr;align-items: center;">
                                             <img class="img-fluid d-block img-error" src="./assets/images/warnnig.svg" alt="wraning" />
                                             <span class="text-error">Campo obrigatório.</span>
                                         </div>
                                     </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <label for="cpf" class="form-label label-pill">CPF</label>
+                        <div class="input-group has-validation mb-3">
+                            <input name="cpf" type="text" class="form-control rounded py-2 px-3" id="cpf" minLenght="15" maxlength="14" size="14" placeholder="000.000.000-00" required>
+                            <div class="invalid-feedback px-2">
+                                <div class="d-grid gap-1" style="grid-template-columns: auto 1fr;align-items: center;">
+                                    <img class="img-fluid d-block img-error" src="./assets/images/warnnig.svg" alt="wraning" />
+                                    <span class="text-error">Campo obrigatório.</span>
                                 </div>
                             </div>
                         </div>
@@ -184,7 +211,7 @@
                             </div>
                             <div class="col-12 col-lg-6 mb-3 mb-lg-0">
                                 <label for="gender" class="form-label label-pill">Sexo</label>
-                                <select class="form-select rounded py-2 px-3" id="gender" required>
+                                <select name="gender" class="form-select rounded py-2 px-3" id="gender" required>
                                   <option selected disabled value="">Selecione...</option>
                                   <option value="masculino">Masculino</option>
                                   <option value="feminino">Feminino</option>
@@ -215,7 +242,7 @@
 
                         <label for="email-singup" class="form-label label-pill">E-mail</label>
                         <div class="input-group has-validation mb-3">
-                            <input name="email" type="email" class="form-control rounded py-2 px-3" id="email-singup" placeholder="nome@mail.com" required>
+                            <input name="email" type="email"  readonly class="form-control-plaintext rounded py-2 px-3" id="email-singup" placeholder="nome@mail.com" required>
                             <div class="invalid-feedback px-2">
                                 <div class="d-grid gap-1" style="grid-template-columns: auto 1fr;align-items: center;">
                                     <img class="img-fluid d-block img-error" src="./assets/images/warnnig.svg" alt="wraning" />
@@ -253,7 +280,7 @@
                         </div>
                         
                         <div class="form-check my-3 mb-4">
-                          <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                          <input class="form-check-input" type="checkbox" name="optin" id="invalidCheck" required>
                           <label class="form-check-label label-pill-check" for="invalidCheck">
                             Concordo com os <a href="//pill.com.br/pages/termos-e-politicas" target="_blank" rel="noopener noreferrer">Termos e Condições de Uso</a> da Pill
                           </label>
@@ -269,6 +296,28 @@
                             Criar conta
                         </button>
                     </form>
+
+                    <div id="alert-singup" class="alert alert-warning alert-dismissible fade show mb-3" role="alert" style="display:none;opacity:0;">
+                        <span class="alert-message"></span>
+                        <button type="button" class="btn-close" aria-label="Close"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="modal-success" tabindex="-1" aria-labelledby="modal-success" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="text-center mx-auto" style="max-width: 295px;">
+                        <p class="modal-body-text">Parabéns! Seu cadastro foi concluído com sucesso.</p>
+                        <a href="/index.html" class="btn btn-pill-secundary rounded-pill py-2 d-block mb-2" data-redirect>Ir para o login</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -278,6 +327,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <!-- validation for forms -->
     <script src="./assets/js/form-validation-bootstrap.js"></script>
+    <!-- mask -->
+    <script src="./assets/js/mask-for-input.js"></script>
 
     <!-- script for handling security code paste -->
     <script>
