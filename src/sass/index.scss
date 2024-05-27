@@ -944,6 +944,21 @@ body,
                 z-index: -1;
             }
         }
+        
+        #form-budget-step-2{
+            #phone{
+                padding-left: 43px !important;
+            }
+            .plus-five-five{
+                cursor: pointer;
+                position: absolute;
+                left: 5px;
+                top: 10px;
+                z-index: 99;
+                padding-left: 5px;
+                color: #5c5b5b;
+            }
+        }
     }
 }
 

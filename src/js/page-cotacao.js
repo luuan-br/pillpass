@@ -1,5 +1,18 @@
 (() => {
     "use strict";
+
+    document.querySelectorAll(".alert .btn-close").forEach((button) => {
+        button.addEventListener("click", () => {
+            const containerAlert = button.closest(".alert");
+
+            gsap.to(containerAlert, {
+                display: "none",
+                opacity: 0,
+                duration: 0.3,
+            });
+        })
+    });
+
     document.getElementById("phone")?.addEventListener("input", mask_phone);
     document.getElementById("cnpj")?.addEventListener("input", mask_cnpj);
 
@@ -23,6 +36,11 @@
     formBudgetStep2.addEventListener("submit", (event) => {
         event.preventDefault();
 
+        const clearClose = document.querySelector("#alert-send .btn-close");
+        if(clearClose){
+            clearClose.click();
+        }
+
         const { currentTarget } = event;
 
         if (currentTarget.checkValidity()) {
@@ -45,6 +63,32 @@
             buttonSubmit.setAttribute("disabled", "disabled");
             buttonSubmit.innerText = "Enviando..."
 
+            //verify Phone
+            if(!validatePhone(fromData.get("phone"))){
+                buttonSubmit.innerText = "Enviar";
+                showMessage("alert-send", "Formato de celular inválido");
+                buttonSubmit.removeAttribute("disabled");
+                return;
+            }
+
+            //verify CNPJ
+            if(!validateCNPJ(fromData.get("cnpj"))){
+                buttonSubmit.innerText = "Enviar";
+                showMessage("alert-send", "Formato de CNPJ inválido");
+                buttonSubmit.removeAttribute("disabled");
+                return;
+            }
+
+            //Verify workers
+            if (!fromData.get("num_workers") || fromData.get("num_workers") <= 0) {
+                buttonSubmit.disabled = false;
+                buttonSubmit.innerText = "Enviar";
+
+                showMessage("alert-send", "Nº de colaboradores deve ser maior que 0");
+                buttonSubmit.removeAttribute("disabled");
+                return;
+            }
+        
             fetch(baseURL, {
                 method: "POST",
                 body: JSON.stringify(data)
@@ -70,6 +114,84 @@
             })
         }
     });
+
+    function validatePhone(phone){
+        let result = phone.replace(/\D/g, "");
+        result = result.replace(/^0/, "");
+    
+        result = result.replace(/(\d{2})(\d{1})/, "($1) $2");
+        result = result.replace(/(\d{5})(\d{1})/, "$1-$2");
+
+        if (!/\(\d{2}\)\s?\d{5}-\d{4}/.test(result)) {
+            return false
+        } 
+        return true;
+    }
+
+    function validateCNPJ(cnpj) {
+        cnpj = cnpj.replace(/[^\d]+/g, '');
+    
+        if (cnpj.length !== 14) {
+            return false;
+        }
+    
+        // Verifica se todos os dígitos são iguais (caso comum de CNPJ inválido)
+        var digitsAreEqual = /^(.)\1+$/.test(cnpj);
+        if (digitsAreEqual) {
+            return false;
+        }
+    
+        // Validação do CNPJ usando o algoritmo
+        var size = cnpj.length - 2;
+        var numbers = cnpj.substring(0, size);
+        var digits = cnpj.substring(size);
+        var sum = 0;
+        var pos = size - 7;
+    
+        for (var i = size; i >= 1; i--) {
+            sum += numbers.charAt(size - i) * pos--;
+            if (pos < 2) {
+                pos = 9;
+            }
+        }
+    
+        var result = sum % 11 < 2 ? 0 : 11 - (sum % 11);
+        if (result !== parseInt(digits.charAt(0))) {
+            return false;
+        }
+    
+        size = size + 1;
+        numbers = cnpj.substring(0, size);
+        sum = 0;
+        pos = size - 7;
+    
+        for (var j = size; j >= 1; j--) {
+            sum += numbers.charAt(size - j) * pos--;
+            if (pos < 2) {
+                pos = 9;
+            }
+        }
+    
+        result = sum % 11 < 2 ? 0 : 11 - (sum % 11);
+        if (result !== parseInt(digits.charAt(1))) {
+            return false;
+        }
+    
+        return true;
+    }
+
+    function showMessage(id, message) {
+        const alertContainer = document.getElementById(id);
+        const containerMessage = alertContainer.querySelector(".alert-message");
+
+        containerMessage.innerText = message;
+
+        gsap.to(alertContainer, {
+            display: "block",
+            opacity: 1,
+            duration: 0.3,
+        });
+    };
 
     function toggleFromsAnimate() {
         gsap.to("#hero", {
