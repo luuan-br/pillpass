@@ -87,9 +87,9 @@
                 <div class="col-12 col-lg-6 order-1 order-lg-0">
                     <div style="max-width: 450px;">
                         <div class="mb-5">
-                            <h2 class="primary-title">Farmácia Corporativa a preço de custo</h2>
+                            <h2 class="primary-title">Farmácia a Preço de Custo para seus Colaboradores</h2>
 
-                            <p class="secundary-title">Pague o que é justo. Sem descontos falsos, sem enrolação.</p>
+                            <p class="secundary-title">Chegou o Benefício Farmácia para todos utilizarem e pouparem até 70% em gastos de farmácia!</p>
                         </div>
 
                         <a class="btn btn-pill-primary rounded-pill py-2 d-block mx-auto" href="quero-uma-cotacao.html">
@@ -270,7 +270,73 @@
         </div>
     </div>
 
-    <div id="company">
+    <div id="title-calculator">
+        <div class="container">
+            
+            <div class="row pt-5">
+                <div class="col-12">
+                    <h2 class="text-center primary-title mb-1">Calculadora de Economia</h2>
+
+                    <p class="text-center secundary-title-2">
+                        Já dissemos que você economiza em média 70% com gastos de farmácia, certo? Com nosso Economizômetro, você vai poder acompanhar o total de economia acumulado ao longo do tempo. Veja abaixo um exemplo da sua economia hoje:
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="savings-calculator" class="my-5">
+        <div class="container">
+
+            <div class="row py-5">
+                <div class="col-12 col-lg-7 mb-4 mb-lg-0">
+                    <div class="calculator">
+                        <div class="container-input" v-for="(range, index) in ranges" :key="index">
+                            <div class="input-range">
+                                <div class="range-label">{{ range.label }}</div>
+                                <div class="input-range-container">
+                                    <div class="range-wrap">
+                                        <div class="range-value" :style="{ left: range.position }">
+                                            <span>R$ {{ range.value }}</span>
+                                        </div>
+                                        <input class="range" type="range" v-model="range.value" @input="setValue(index)" :min="range.min" :max="range.max" >
+                                    </div>
+                                </div>
+                            </div>
+                            <input class="input-controle" type="text" @change="event => changeValueRange(event.target.value, index)" :value="`R$ ${range.value}`">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-5">
+                    <div class="calculator-result">
+                        <div class="input-container">
+                            <div class="total-value">
+                                <div class="value">R$ {{ totalWithDiscount }}</div>
+                                <div class="text">DE ECONOMIA <br/>Mesal</div>
+                            </div>
+                        </div>
+
+                        <img class="img-fluid img-e-pillpass" src="./assets/images/economia-pillpass.webp" alt="economia pillpasse">
+
+                        <div class="input-container-2">
+                            <div class="currency-price">
+                                <div class="label">GASTO ATUAL</div>
+                                <div class="value">R$ {{ total }}</div>
+                            </div>
+                            <div class="currency-pillpass">
+                                <div class="label">Com pillpass</div>
+                                <div class="value">R$ {{ discount }}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br/>
+    <div id="company" >
         <div class="container mb-4">
             <div class="row">
                 <div class="col-12">
@@ -489,5 +555,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <!-- validation for forms -->
     <script src="./assets/js/form-validation-bootstrap.js"></script>
+    <!-- vueJs -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+    <!-- script -->
+    <script src="./assets/js/pillpass-price-calculator.js"></script>
 </body>
 </html>
