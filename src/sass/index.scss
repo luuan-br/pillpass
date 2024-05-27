@@ -37,28 +37,52 @@ body,
 
 .page-home {
     #hero {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-image: "";
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: calc(100% + 5rem);
+        max-width: 1650px;
+        margin: auto;
+        
+        @media (min-width: 992px) {
+            height: 315px;
+            background-image: url("../images/hero-banner-desktop.png");
+
+        }
+
+        @media (min-width: 1200px) {
+            height: 420px;
+        }
+
+        @media (min-width: 1300px) {
+            height: 450px;
+        }
+
+        @media (min-width: 1500px) {
+            
+            background-position: calc(100% - 5rem);
+        }
+
+        .align-mobile-center{
+            @media (max-width: 992px) {
+                margin: auto;
+            }
+        }
+
+        .img-mobile{
+            max-height: 400px;
+            @media screen and (min-width: 992px){
+                display: none;
+            }
+        }
+
         &>.container {
             position: relative;
             contain: layout;
-
-            &::after {
-                content: '';
-                display: block;
-                width: 227px;
-                height: 100%;
-                background-image: url("../images/Group 128.webp");
-                background-size: contain;
-                background-repeat: no-repeat;
-                background-position: bottom;
-                position: absolute;
-                bottom: -5px;
-                right: 0;
-                transform: translateX(75%);
-
-                @media (max-width: 992px) {
-                    display: none;
-                }
-            }
         }
     }
 }
@@ -370,6 +394,10 @@ body,
 
                 @media (max-width: 992px) {
                     top: 6px;
+                }
+
+                @media screen and (min-width: 992px) and (max-width: 1200px){
+                    left: 114%;
                 }
             }
         }
