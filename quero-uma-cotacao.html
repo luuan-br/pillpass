@@ -157,11 +157,12 @@
                                     </div>
                                     
                                     <div class="input-group has-validation mb-3">
-                                        <input name="phone" type="phone" class="form-control rounded-pill py-2 px-3" id="phone" minlength="15" maxlength="15" placeholder="Celular: +55  DDD 00000-0000" required>
+                                        <input name="phone" type="phone" class="form-control rounded-pill py-2 px-3" id="phone" minlength="15" maxlength="15" placeholder="(99) 99999-9999" required>
+                                        <div class="plus-five-five">+55</div>
                                         <div class="invalid-feedback px-2">
                                             <div class="d-grid gap-1" style="grid-template-columns: auto 1fr;align-items: center;">
                                                 <img class="img-fluid" src="./assets/images/warnnig.svg" alt="wraning" />
-                                                <span>Campo obrigatório</span>
+                                                <span>Formato de celular inválido</span>
                                             </div>
                                         </div>
                                     </div>
@@ -171,7 +172,7 @@
                                         <div class="invalid-feedback px-2">
                                             <div class="d-grid gap-1" style="grid-template-columns: auto 1fr;align-items: center;">
                                                 <img class="img-fluid" src="./assets/images/warnnig.svg" alt="wraning" />
-                                                <span>Campo obrigatório</span>
+                                                <span>Formato de CNPJ inválido</span>
                                             </div>
                                         </div>
                                     </div>
@@ -181,7 +182,7 @@
                                         <div class="invalid-feedback px-2">
                                             <div class="d-grid gap-1" style="grid-template-columns: auto 1fr;align-items: center;">
                                                 <img class="img-fluid" src="./assets/images/warnnig.svg" alt="wraning" />
-                                                <span>Campo obrigatório</span>
+                                                <span>Nº de colaboradores deve ser maior que 0</span>
                                             </div>
                                         </div>
                                     </div>
@@ -191,6 +192,12 @@
                                     Enviar
                                 </button>
                             </form>
+
+                            <br/>
+                            <div id="alert-send" class="alert alert-warning alert-dismissible fade show mb-3" role="alert" style="display:none;opacity:0;">
+                                <span class="alert-message"></span>
+                                <button type="button" class="btn-close" aria-label="Close"></button>
+                            </div>
                         </div>
                     </div>
                 </div>

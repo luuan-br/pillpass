@@ -37,28 +37,52 @@ body,
 
 .page-home {
     #hero {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-image: "";
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: calc(100% + 5rem);
+        max-width: 1650px;
+        margin: auto;
+        
+        @media (min-width: 992px) {
+            height: 315px;
+            background-image: url("../images/hero-banner-desktop.png");
+
+        }
+
+        @media (min-width: 1200px) {
+            height: 420px;
+        }
+
+        @media (min-width: 1300px) {
+            height: 450px;
+        }
+
+        @media (min-width: 1500px) {
+            
+            background-position: calc(100% - 5rem);
+        }
+
+        .align-mobile-center{
+            @media (max-width: 992px) {
+                margin: auto;
+            }
+        }
+
+        .img-mobile{
+            max-height: 400px;
+            @media screen and (min-width: 992px){
+                display: none;
+            }
+        }
+
         &>.container {
             position: relative;
             contain: layout;
-
-            &::after {
-                content: '';
-                display: block;
-                width: 227px;
-                height: 100%;
-                background-image: url("../images/Group 128.webp");
-                background-size: contain;
-                background-repeat: no-repeat;
-                background-position: bottom;
-                position: absolute;
-                bottom: -5px;
-                right: 0;
-                transform: translateX(75%);
-
-                @media (max-width: 992px) {
-                    display: none;
-                }
-            }
         }
     }
 }
@@ -79,7 +103,7 @@ body,
             width: 1400px;
             max-width: 1400px;
             height: 100%;
-            background-color: #F1ECFF;
+            background-color: rgba($color: #D1E3FF, $alpha: 0.2);
             border-radius: 2.813rem;
         }
 
@@ -91,7 +115,6 @@ body,
         flex-direction: row;
         align-items: center;
         justify-content: space-around;
-        gap: 1.563rem;
 
         .product {
             position: relative;
@@ -101,8 +124,8 @@ body,
             display: flex;
             flex-direction: column;
 
-            height: 326px;
-            width: 144px;
+            height: 324px;
+            width: 190px;
             padding: 0 4px;
             margin-inline-start: 10px;
             margin-inline-end: 10px;
@@ -111,18 +134,16 @@ body,
             &__img {
                 position: absolute;
                 left: 50%;
-                top: 15px;
+                top: 8px;
                 transform: translate(-50%);
 
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                background-color: #FFFFFF;
-                border-radius: 1.563rem;
+                border-radius: 10px;
 
-                min-width: 165.56px;
+                min-width: 178px;
                 min-height: 211.74px;
-                box-shadow: 0 4px 26.8px rgba(0, 0, 0, 0.12);
             }
 
             &__info {
@@ -131,13 +152,13 @@ body,
                 display: flex;
                 flex-direction: column;
                 justify-content: flex-end;
-                margin-bottom: 2.188rem;
+                margin-bottom: 3.5rem;
 
                 .name {
                     font-size: 18px;
                     font-weight: 500;
-                    line-height: 1.1;
-                    color: #FFFFFF;
+                    line-height: 1.8;
+                    color: #000072;
                     text-align: center;
 
                     display: -webkit-box;
@@ -163,13 +184,13 @@ body,
             }
 
             &__price {
-                background-color: #FFFFFF;
-                border: 1px solid #CDC2ED;
+                background-color: #000072;
+                border: 1px solid #000072;
 
                 display: flex;
-                flex-direction: row;
+                flex-direction: column;
                 align-items: center;
-                justify-content: space-around;
+                justify-content: center;
                 padding: 0 12px;
 
                 width: 174px;
@@ -178,28 +199,19 @@ body,
 
                 position: absolute;
                 left: 50%;
-                bottom: -1.25rem;
+                bottom: 0.5rem;
                 transform: translate(-50%);
 
-                .label {
-                    display: flex;
-                    gap: 10px;
-                    font-size: 8px;
-                    color: #9B8FCC;
-
-                    span {
-                        &:nth-of-type(1) {
-                            display: block;
-                            max-width: 2.5rem;
-                        }
-                    }
+                span{
+                    font-size: 10px;
+                    color: #C5FB69;
+                    position: relative;
+                    top: 8px;
                 }
 
-                .price {
-                    color: #9B8FCC;
-                    font-size: 1.875rem;
-                    line-height: 1;
-                    font-weight: bold;
+                h3{
+                    font-size: 30px;
+                    color: #C5FB69;
                 }
             }
         }
@@ -368,11 +380,12 @@ body,
                 left: 100%;
                 transform: translateX(-85%);
 
-                @media (min-width: 992px) and (max-width: 1200px) {
-                    left: 116%;
-                }
                 @media (max-width: 992px) {
                     top: 6px;
+                }
+
+                @media screen and (min-width: 992px) and (max-width: 1200px){
+                    left: 114%;
                 }
             }
         }
@@ -536,10 +549,6 @@ body,
             }
         }
     }
-}
-
-#title-calculator{
-
 }
 
 #savings-calculator {
@@ -967,6 +976,21 @@ body,
                 right: -105px;
                 bottom: -39px;
                 z-index: -1;
+            }
+        }
+        
+        #form-budget-step-2{
+            #phone{
+                padding-left: 43px !important;
+            }
+            .plus-five-five{
+                cursor: pointer;
+                position: absolute;
+                left: 5px;
+                top: 10px;
+                z-index: 99;
+                padding-left: 5px;
+                color: #5c5b5b;
             }
         }
     }
