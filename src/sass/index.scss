@@ -551,6 +551,50 @@ body,
     }
 }
 
+#benefits-program {
+    @media (min-width: 992px) {
+        .image-1 {
+            position: relative;
+            contain: layout;
+            padding-bottom: 37px;
+
+            &::after {
+                content: url(../images/part1.png);
+                position: absolute;
+                top: 262px;
+                left: 31%;
+            }
+        }
+
+        .image-2 {
+            position: relative;
+            contain: layout;
+            transform: translateY(11.5px);
+
+            &::after {
+                content: url(../images/part2.png);
+                position: absolute;
+                top: 116px;
+                left: -99px;
+                z-index: -1;
+            }
+        }
+
+        .image-3 {
+            position: relative;
+            contain: layout;
+
+            &::after {
+                content: url(../images/part3.png);
+                position: absolute;
+                top: -7px;
+                left: 52%;
+                z-index: -1;
+            }
+        }
+    }
+}
+
 #savings-calculator {
     contain: layout;
     .container {
