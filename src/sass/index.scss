@@ -552,11 +552,12 @@ body,
 }
 
 #benefits-program {
-    @media (min-width: 992px) {
+    @media (min-width: 1200px) {
         .image-1 {
             position: relative;
             contain: layout;
             padding-bottom: 37px;
+            height: 344px;
 
             &::after {
                 content: url(../images/part1.png);
@@ -570,6 +571,7 @@ body,
             position: relative;
             contain: layout;
             transform: translateY(11.5px);
+            height: 494px;
 
             &::after {
                 content: url(../images/part2.png);
@@ -583,6 +585,7 @@ body,
         .image-3 {
             position: relative;
             contain: layout;
+            height: 315px;
 
             &::after {
                 content: url(../images/part3.png);
